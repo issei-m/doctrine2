@@ -137,7 +137,6 @@ class YamlDriver extends FileDriver
                     }
                 }
 
-
                 if (isset($resultSetMapping['columnResult'])) {
                     foreach ($resultSetMapping['columnResult'] as $columnResultAnnot) {
                         $columns[] = array(
@@ -182,7 +181,6 @@ class YamlDriver extends FileDriver
                 }
             }
         }
-
 
         // Evaluate changeTrackingPolicy
         if (isset($element['changeTrackingPolicy'])) {
@@ -310,7 +308,6 @@ class YamlDriver extends FileDriver
                 $metadata->mapField($mapping);
             }
         }
-
 
         // Evaluate oneToOne relationships
         if (isset($element['oneToOne'])) {

@@ -146,7 +146,6 @@ class ResultSetMappingBuilder extends ResultSetMapping
             throw new \InvalidArgumentException('ResultSetMapping builder does not currently support inheritance.');
         }
 
-
         foreach ($classMetadata->getColumnNames() as $columnName) {
             $propertyName = $classMetadata->getFieldName($columnName);
             $columnAlias  = $platform->getSQLResultCasing($columnAliasMap[$columnName]);
@@ -310,7 +309,6 @@ class ResultSetMappingBuilder extends ResultSetMapping
         $resultMapping  = $class->getSqlResultSetMapping($resultSetMappingName);
         $rooShortName   = $class->reflClass->getShortName();
         $rootAlias      = strtolower($rooShortName[0]) . $counter;
-
 
         if (isset($resultMapping['entities'])) {
             foreach ($resultMapping['entities'] as $key => $entityMapping) {

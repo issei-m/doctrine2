@@ -517,7 +517,6 @@ class BasicEntityPersister
                 ? $association['joinTable']['joinColumns']
                 : $association['joinTable']['inverseJoinColumns'];
 
-
             if ($selfReferential) {
                 $otherColumns = (! $mapping['isOwningSide'])
                     ? $association['joinTable']['joinColumns']
@@ -1029,7 +1028,6 @@ class BasicEntityPersister
         $class          = $sourceClass;
         $association    = $assoc;
         $criteria       = array();
-
 
         if ( ! $assoc['isOwningSide']) {
             $class       = $this->em->getClassMetadata($assoc['targetEntity']);
